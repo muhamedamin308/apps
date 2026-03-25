@@ -12,143 +12,29 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <button class="theme-toggle" id="themeToggle">🌓</button>
 
-    <!-- ── NAVIGATION ── -->
-    <nav id="navbar">
-      <div class="nav-container">
-        <a href="#hero" class="nav-logo">
-          <img src="android.png" alt="Android" width="28" height="28" />
-          <span>Muhamed<span class="accent">.</span></span>
-        </a>
-        <ul class="nav-links" id="navLinks">
-          <li><a href="#about" class="nav-link">About</a></li>
-          <li><a href="#skills" class="nav-link">Skills</a></li>
-          <li><a href="#experience" class="nav-link">Experience</a></li>
-          <li><a href="#projects" class="nav-link">Projects</a></li>
-          <li><a href="#contact" class="nav-link">Contact</a></li>
-        </ul>
-        <div class="nav-actions">
-          <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
-            <span class="theme-icon">☀️</span>
-          </button>
-          <button class="hamburger" id="hamburger" aria-label="Menu">
-            <span></span><span></span><span></span>
-          </button>
-        </div>
-      </div>
-    </nav>
-
-    <!-- ── HERO ── -->
-    <section id="hero">
-      <div class="hero-bg">
-        <div class="hero-orb orb-1"></div>
-        <div class="hero-orb orb-2"></div>
-        <div class="hero-orb orb-3"></div>
-        <div class="grid-overlay"></div>
-      </div>
-      <div class="hero-content">
-        <div class="hero-badge reveal">
-          <span class="badge-dot"></span>
-          Available for opportunities
-        </div>
-        <div class="profile-wrapper reveal">
-          <img src="109667939.png" alt="Muhamed Amin" class="profile-img" />
-          <div class="profile-ring"></div>
-        </div>
-        <h1 class="hero-name reveal">Muhamed Amin</h1>
-        <div class="hero-typed-wrap reveal">
-          <span class="typed-prefix">I build </span>
-          <span class="typed-text" id="typedText"></span>
-          <span class="typed-cursor">|</span>
-        </div>
-        <p class="hero-desc reveal">
-          Android Developer with <strong>3+ years</strong> of crafting beautiful,
-          performant mobile experiences. Passionate about clean architecture, smooth
-          animations & great UX.
-        </p>
-        <div class="hero-cta reveal">
-          <a href="#projects" class="btn btn-primary">View My Work</a>
-          <a href="#contact" class="btn btn-outline">Get In Touch</a>
-        </div>
-        <div class="hero-socials reveal">
-          <a href="https://github.com/muhamedamin308" target="_blank" rel="noopener" class="social-icon" title="GitHub">
-            <img src="github.svg" alt="GitHub" width="22" height="22" />
-          </a>
-          <a href="https://linkedin.com/in/muhamed-amin-hassan" target="_blank" rel="noopener" class="social-icon" title="LinkedIn">
-            <img src="linkedin.svg" alt="LinkedIn" width="22" height="22" />
-          </a>
-          <a href="https://x.com/MohamedAmin2290" target="_blank" rel="noopener" class="social-icon" title="Twitter / X">
-            <img src="twitter-alt-square.svg" alt="Twitter" width="22" height="22" />
-          </a>
-          <a href="https://medium.com/@mohamed.amin.2290" target="_blank" rel="noopener" class="social-icon" title="Medium">
-            <img src="medium.svg" alt="Medium" width="22" height="22" />
-          </a>
-        </div>
-      </div>
-      <a href="#about" class="scroll-down" aria-label="Scroll down">
-        <span class="scroll-arrow"></span>
-      </a>
-    </section>
-
-    <!-- ── ABOUT ── -->
-    <section id="about">
+    <header>
       <div class="container">
-        <div class="section-header reveal">
-          <span class="section-tag">01 — About</span>
-          <h2>About <span class="accent">Me</span></h2>
-        </div>
-        <div class="about-grid">
-          <div class="about-text reveal">
-            <p>
-              I'm an <strong>Android Developer</strong> with over 3 years of experience creating
-              robust, user-friendly mobile applications. My focus is on writing
-              clean, maintainable code and delivering intuitive user experiences.
-            </p>
-            <p>
-              I'm passionate about mobile technology and constantly learning new tools
-              and techniques to sharpen my craft — from <strong>Jetpack Compose</strong> to
-              clean <strong>MVVM/MVI architectures</strong> and modern dependency injection.
-            </p>
-            <div class="about-stats">
-              <div class="stat-card">
-                <span class="stat-num">3+</span>
-                <span class="stat-label">Years Experience</span>
-              </div>
-              <div class="stat-card">
-                <span class="stat-num">6+</span>
-                <span class="stat-label">Projects Shipped</span>
-              </div>
-              <div class="stat-card">
-                <span class="stat-num">2</span>
-                <span class="stat-label">Internships</span>
-              </div>
-            </div>
-          </div>
-          <div class="about-card glass reveal">
-            <div class="info-row">
-              <span class="info-icon">📍</span>
-              <span>Cairo, Egypt</span>
-            </div>
-            <div class="info-row">
-              <span class="info-icon">📧</span>
-              <a href="mailto:mohamed.amin.2290@gmail.com">mohamed.amin.2290@gmail.com</a>
-            </div>
-            <div class="info-row">
-              <span class="info-icon">📱</span>
-              <span>+2010 2766 0252</span>
-            </div>
-            <div class="info-row">
-              <span class="info-icon">💼</span>
-              <span>Open to Work</span>
-            </div>
-            <div class="info-row">
-              <span class="info-icon">🎓</span>
-              <span>Android & Mobile Dev</span>
-            </div>
-          </div>
-        </div>
+        <img src="109667939.png" alt="Profile Picture" class="profile-img" />
+        <h1>Muhamed Amin</h1>
+        <h2>Android Developer</h2>
+        <p>Building beautiful & performant android mobile experiences</p>
+        <a href="#contact" class="btn">Contact Me</a>
       </div>
-    </section>
+    </header>
+
+    <main class="container">
+      <section id="about">
+        <h2>About <span class="accent">Me</span></h2>
+        <p>
+          I'm an Android Developer with over 3 years of experience creating
+          robust, user-friendly mobile applications. My focus is on creating
+          clean, maintainable code and intuitive user experiences. I'm
+          passionate about mobile technology and constantly learning new tools
+          and techniques to improve my craft.
+        </p>
+      </section>
 
     <!-- ── SKILLS ── -->
     <section id="skills">
@@ -256,7 +142,15 @@
               </div>
               <h3>Intern Android Developer</h3>
               <h4>
-                <a href="https://zimozi.co/" target="_blank" rel="noopener noreferrer" class="accent-link">Zimozi.co</a>
+                <a
+                  style="color: #3ddc84"
+                  href="https://zimozi.co/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Zimozi.co</a
+                >
+                - 08/2022 to 12/2022
               </h4>
               <ul>
                 <li>Built <strong>Evegene</strong> quiz app from scratch using Kotlin, MVVM, Dagger-Hilt, Coroutines & local JSON.</li>
