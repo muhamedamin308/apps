@@ -1,1074 +1,793 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Muhamed Amin - Android Developer</title>
-    <link rel="icon" href="android.png" type="image/x-icon" />
+    <title>Muhamed Amin — Android Developer</title>
+    <meta name="description" content="Muhamed Amin is a passionate Android Developer with 3+ years of experience building beautiful, performant mobile applications using Kotlin, Java, MVVM, Jetpack Compose, and modern Android tools." />
+    <link rel="icon" href="android.png" type="image/png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <button class="theme-toggle" id="themeToggle">🌓</button>
 
-    <header>
-      <div class="container">
-        <img src="109667939.png" alt="Profile Picture" class="profile-img" />
-        <h1>Muhamed Amin</h1>
-        <h2>Android Developer</h2>
-        <p>Building beautiful & performant android mobile experiences</p>
-        <a href="#contact" class="btn">Contact Me</a>
-      </div>
-    </header>
-
-    <main class="container">
-      <section id="about">
-        <h2>About <span class="accent">Me</span></h2>
-        <p>
-          I'm an Android Developer with over 3 years of experience creating
-          robust, user-friendly mobile applications. My focus is on creating
-          clean, maintainable code and intuitive user experiences. I'm
-          passionate about mobile technology and constantly learning new tools
-          and techniques to improve my craft.
-        </p>
-      </section>
-
-      <section id="skills">
-        <h2>My <span class="accent">Skills</span></h2>
-        <div class="skills-list">
-          <span class="skill-tag">Kotlin</span>
-          <span class="skill-tag">Java</span>
-          <span class="skill-tag">Android SDK</span>
-          <span class="skill-tag">Jetpack Compose</span>
-          <span class="skill-tag">MVVM</span>
-          <span class="skill-tag">OOP (Object-Oriented Programming)</span>
-          <span class="skill-tag">Retrofit</span>
-          <span class="skill-tag">Room Database</span>
-          <span class="skill-tag">Coroutines</span>
-          <span class="skill-tag">LiveData</span>
-          <span class="skill-tag">ViewModel</span>
-          <span class="skill-tag">Data Binding</span>
-          <span class="skill-tag">Problem Solving</span>
-          <span class="skill-tag">Dependency Injection</span>
-          <span class="skill-tag">Git</span>
-          <span class="skill-tag">CI/CD</span>
+    <!-- ── NAVIGATION ── -->
+    <nav id="navbar">
+      <div class="nav-container">
+        <a href="#hero" class="nav-logo">
+          <img src="android.png" alt="Android" width="28" height="28" />
+          <span>Muhamed<span class="accent">.</span></span>
+        </a>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#experience" class="nav-link">Experience</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+        <div class="nav-actions">
+          <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+            <span class="theme-icon">☀️</span>
+          </button>
+          <button class="hamburger" id="hamburger" aria-label="Menu">
+            <span></span><span></span><span></span>
+          </button>
         </div>
-      </section>
+      </div>
+    </nav>
 
-      <section id="experience">
-        <h2>Work <span class="accent">Experience</span></h2>
-        <div class="timeline">
-          <!-- Example Timeline Item - Replace with your actual work experience -->
+    <!-- ── HERO ── -->
+    <section id="hero">
+      <div class="hero-bg">
+        <div class="hero-orb orb-1"></div>
+        <div class="hero-orb orb-2"></div>
+        <div class="hero-orb orb-3"></div>
+        <div class="grid-overlay"></div>
+      </div>
+      <div class="hero-content">
+        <div class="hero-badge reveal">
+          <span class="badge-dot"></span>
+          Available for opportunities
+        </div>
+        <div class="profile-wrapper reveal">
+          <img src="109667939.png" alt="Muhamed Amin" class="profile-img" />
+          <div class="profile-ring"></div>
+        </div>
+        <h1 class="hero-name reveal">Muhamed Amin</h1>
+        <div class="hero-typed-wrap reveal">
+          <span class="typed-prefix">I build </span>
+          <span class="typed-text" id="typedText"></span>
+          <span class="typed-cursor">|</span>
+        </div>
+        <p class="hero-desc reveal">
+          Android Developer with <strong>3+ years</strong> of crafting beautiful,
+          performant mobile experiences. Passionate about clean architecture, smooth
+          animations & great UX.
+        </p>
+        <div class="hero-cta reveal">
+          <a href="#projects" class="btn btn-primary">View My Work</a>
+          <a href="#contact" class="btn btn-outline">Get In Touch</a>
+        </div>
+        <div class="hero-socials reveal">
+          <a href="https://github.com/muhamedamin308" target="_blank" rel="noopener" class="social-icon" title="GitHub">
+            <img src="github.svg" alt="GitHub" width="22" height="22" />
+          </a>
+          <a href="https://linkedin.com/in/muhamed-amin-hassan" target="_blank" rel="noopener" class="social-icon" title="LinkedIn">
+            <img src="linkedin.svg" alt="LinkedIn" width="22" height="22" />
+          </a>
+          <a href="https://x.com/MohamedAmin2290" target="_blank" rel="noopener" class="social-icon" title="Twitter / X">
+            <img src="twitter-alt-square.svg" alt="Twitter" width="22" height="22" />
+          </a>
+          <a href="https://medium.com/@mohamed.amin.2290" target="_blank" rel="noopener" class="social-icon" title="Medium">
+            <img src="medium.svg" alt="Medium" width="22" height="22" />
+          </a>
+        </div>
+      </div>
+      <a href="#about" class="scroll-down" aria-label="Scroll down">
+        <span class="scroll-arrow"></span>
+      </a>
+    </section>
+
+    <!-- ── ABOUT ── -->
+    <section id="about">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">01 — About</span>
+          <h2>About <span class="accent">Me</span></h2>
+        </div>
+        <div class="about-grid">
+          <div class="about-text reveal">
+            <p>
+              I'm an <strong>Android Developer</strong> with over 3 years of experience creating
+              robust, user-friendly mobile applications. My focus is on writing
+              clean, maintainable code and delivering intuitive user experiences.
+            </p>
+            <p>
+              I'm passionate about mobile technology and constantly learning new tools
+              and techniques to sharpen my craft — from <strong>Jetpack Compose</strong> to
+              clean <strong>MVVM/MVI architectures</strong> and modern dependency injection.
+            </p>
+            <div class="about-stats">
+              <div class="stat-card">
+                <span class="stat-num">3+</span>
+                <span class="stat-label">Years Experience</span>
+              </div>
+              <div class="stat-card">
+                <span class="stat-num">6+</span>
+                <span class="stat-label">Projects Shipped</span>
+              </div>
+              <div class="stat-card">
+                <span class="stat-num">2</span>
+                <span class="stat-label">Internships</span>
+              </div>
+            </div>
+          </div>
+          <div class="about-card glass reveal">
+            <div class="info-row">
+              <span class="info-icon">📍</span>
+              <span>Cairo, Egypt</span>
+            </div>
+            <div class="info-row">
+              <span class="info-icon">📧</span>
+              <a href="mailto:mohamed.amin.2290@gmail.com">mohamed.amin.2290@gmail.com</a>
+            </div>
+            <div class="info-row">
+              <span class="info-icon">📱</span>
+              <span>+2010 2766 0252</span>
+            </div>
+            <div class="info-row">
+              <span class="info-icon">💼</span>
+              <span>Open to Work</span>
+            </div>
+            <div class="info-row">
+              <span class="info-icon">🎓</span>
+              <span>Android & Mobile Dev</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── SKILLS ── -->
+    <section id="skills">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">02 — Skills</span>
+          <h2>My <span class="accent">Skills</span></h2>
+        </div>
+        <div class="skills-categories reveal">
+          <div class="skill-category glass">
+            <div class="skill-cat-icon">📱</div>
+            <h3>Languages</h3>
+            <div class="skill-tags">
+              <span class="skill-tag">Kotlin</span>
+              <span class="skill-tag">Java</span>
+            </div>
+          </div>
+          <div class="skill-category glass">
+            <div class="skill-cat-icon">🏗️</div>
+            <h3>Architecture</h3>
+            <div class="skill-tags">
+              <span class="skill-tag">MVVM</span>
+              <span class="skill-tag">OOP</span>
+              <span class="skill-tag">Clean Architecture</span>
+            </div>
+          </div>
+          <div class="skill-category glass">
+            <div class="skill-cat-icon">⚡</div>
+            <h3>Async & Data</h3>
+            <div class="skill-tags">
+              <span class="skill-tag">Coroutines</span>
+              <span class="skill-tag">LiveData</span>
+              <span class="skill-tag">StateFlow</span>
+              <span class="skill-tag">Channels</span>
+            </div>
+          </div>
+          <div class="skill-category glass">
+            <div class="skill-cat-icon">🎨</div>
+            <h3>UI</h3>
+            <div class="skill-tags">
+              <span class="skill-tag">Jetpack Compose</span>
+              <span class="skill-tag">Data Binding</span>
+              <span class="skill-tag">View Binding</span>
+              <span class="skill-tag">ViewModel</span>
+            </div>
+          </div>
+          <div class="skill-category glass">
+            <div class="skill-cat-icon">🔗</div>
+            <h3>Networking & Storage</h3>
+            <div class="skill-tags">
+              <span class="skill-tag">Retrofit</span>
+              <span class="skill-tag">OkHttp</span>
+              <span class="skill-tag">Room Database</span>
+              <span class="skill-tag">Firebase</span>
+            </div>
+          </div>
+          <div class="skill-category glass">
+            <div class="skill-cat-icon">🛠️</div>
+            <h3>Tools & DI</h3>
+            <div class="skill-tags">
+              <span class="skill-tag">Dagger Hilt</span>
+              <span class="skill-tag">Koin</span>
+              <span class="skill-tag">Git</span>
+              <span class="skill-tag">CI/CD</span>
+              <span class="skill-tag">Android SDK</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── EXPERIENCE ── -->
+    <section id="experience">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">03 — Experience</span>
+          <h2>Work <span class="accent">Experience</span></h2>
+        </div>
+        <div class="timeline reveal">
+
           <div class="timeline-item">
-            <div class="timeline-content">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card glass">
+              <div class="timeline-meta">
+                <span class="timeline-date">Dec 2021 — May 2022</span>
+                <span class="timeline-badge">Internship</span>
+              </div>
               <h3>Intern Android Developer</h3>
-              <h4>MSP Student Activity - 12/2021 to 05/2022</h4>
+              <h4>MSP Student Activity</h4>
               <ul>
-                <li>Learn How to build android apps for the first time.</li>
-                <li>
-                  Implement my first application as android developer whish's
-                  called Galaxy
-                </li>
+                <li>Learned to build Android apps from scratch for the first time.</li>
+                <li>Implemented my first app as an Android developer — <strong>Galaxy</strong>.</li>
                 <li>Participated in code reviews and team meetings.</li>
-                <li>Gained hands-on experience with Java.</li>
+                <li>Gained hands-on experience with <strong>Java</strong>.</li>
               </ul>
             </div>
           </div>
 
           <div class="timeline-item">
-            <div class="timeline-content">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card glass">
+              <div class="timeline-meta">
+                <span class="timeline-date">Aug 2022 — Dec 2022</span>
+                <span class="timeline-badge">Internship</span>
+              </div>
               <h3>Intern Android Developer</h3>
               <h4>
-                <a
-                  style="color: #3ddc84"
-                  href="https://zimozi.co/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Zimozi.co</a
-                >
-                - 08/2022 to 12/2022
+                <a href="https://zimozi.co/" target="_blank" rel="noopener noreferrer" class="accent-link">Zimozi.co</a>
               </h4>
               <ul>
-                <li>
-                  Developed "Evegene" quiz app from scratch using Kotlin, MVVM
-                  Architecture, Dagger-Hilt for DI, Coroutines, and Local JSON
-                  file
-                </li>
-                <li>
-                  Contributed to the "Claim ExChange" Android app by building UI
-                  components for activities and integrating APIs for data
-                  retrieval.
-                </li>
-                <li>
-                  Leveraged Kotlin/JS to create multiplatform apps for the
-                  "Claim ExChange" website, focusing on UI development.
-                </li>
+                <li>Built <strong>Evegene</strong> quiz app from scratch using Kotlin, MVVM, Dagger-Hilt, Coroutines & local JSON.</li>
+                <li>Contributed to <strong>Claim ExChange</strong> Android app — built UI components & integrated APIs.</li>
+                <li>Leveraged Kotlin/JS to create multiplatform UI for the Claim ExChange website.</li>
               </ul>
             </div>
           </div>
-        </div>
-      </section>
 
-      <section id="projects">
-        <h2>My <span class="accent">Projects</span></h2>
-        <div class="projects-grid">
-          <!-- Project 1 -->
-          <div class="project-card">
-            <div class="project-img">
-              <img
-                src="images/fashion-zone/Green and Cream Modern Sales Marketing Presentation.png"
-                alt="Fashion-Zone App Screenshot"
-                class="cropped-img"
-              />
-            </div>
-            <div class="project-content">
-              <h3>FASHION-ZONE</h3>
-              <p>
-                Fashion-Zone offers a wide variety of clothing with an engaging
-                online shopping experience for users, while also providing
-                efficient management tools for administrators.
-              </p>
-              <div class="project-tech">
-                <span>Java</span>
-                <span>MVVM</span>
-                <span>Firebase</span>
-                <span>Google Play Service Location</span>
-                <span>AnyChart Library</span>
-              </div>
-              <button class="btn-footer" data-project="fashion-zone">
-                View Project
-              </button>
-            </div>
-          </div>
-          <!-- Project 2 -->
-          <div class="project-card">
-            <div class="project-img">
-              <img
-                src="images/movies-club/Purple Modern Mobile Apps Services Presentation.png"
-                alt="Movies-Club App Screenshot"
-                class="cropped-img"
-              />
-            </div>
-            <div class="project-content">
-              <h3>MOVIES-CLUB</h3>
-              <p>
-                The Movie Club App for Android offers a world of cinematic
-                entertainment through seamless integration with Movies APIs and
-                smooth animations, promising to turn boring evenings into
-                enjoyable movie experiences.
-              </p>
-              <div class="project-tech">
-                <span>Kotlin</span>
-                <span>Retrofit</span>
-                <span>Animations</span>
-                <span>Glide Library</span>
-              </div>
-              <button class="btn-footer" data-project="movies-club">
-                View Project
-              </button>
-            </div>
-          </div>
-          <!-- Project 3 -->
-          <div class="project-card">
-            <div class="project-img">
-              <img
-                src="images/mini-amazon/Purple App Phone Mockup Sales Marketing Presentation.png"
-                alt="Mini-Amazon App Screenshot"
-                class="cropped-img"
-              />
-            </div>
-            <div class="project-content">
-              <h3>MINI-AMAZON</h3>
-              <p>
-                Welcome to Mini-Amazon, your one-stop destination for all your
-                shopping needs. Explore a vast array of products including
-                electronics, games, clothing, groceries, and more, all
-                conveniently accessible in one place.
-              </p>
-              <div class="project-tech">
-                <span>Kotlin</span>
-                <span>MVVM & LiveData</span>
-                <span>Firebase Services</span>
-                <span>Dagger Hilt DI</span>
-                <span>Coroutines</span>
-              </div>
-              <button class="btn-footer" data-project="mini-amazon">
-                View Project
-              </button>
-            </div>
-          </div>
-          <!-- Project 4 -->
-          <div class="project-card">
-            <div class="project-img">
-              <img
-                src="images/spotify-clone/Yellow and Pink Gradient Simple Abstract Mobile Apps Presentation.png"
-                alt="Spotify-Clone App Screenshot"
-                class="cropped-img"
-              />
-            </div>
-            <div class="project-content">
-              <h3>SPOTIFY-CLONE</h3>
-              <p>
-                Stream your favorite music and discover new artists with this
-                sleek and intuitive audio player. Create playlists and enjoy
-                your personalized soundscape on the go.
-              </p>
-              <div class="project-tech">
-                <span>Kotlin</span>
-                <span>MVVM</span>
-                <span>Firebase Services</span>
-                <span>Dagger Hilt DI</span>
-                <span>Coroutines</span>
-                <span>Exo Player API</span>
-              </div>
-              <button class="btn-footer" data-project="spotify-clone">
-                View Project
-              </button>
-            </div>
-          </div>
-          <!-- Project 5 -->
-          <div class="project-card">
-            <div class="project-img">
-              <img
-                src="images/udemyfy/Purple Pink Gradient Mobile Application Presentation.png"
-                alt="Udemyfy App Screenshot"
-                class="cropped-img"
-              />
-            </div>
-            <div class="project-content">
-              <h3>UDEMYFY</h3>
-              <p>
-                Udemyfy is an Android app for exploring courses with detailed
-                info and a "Watch Later" list. It prioritizes user privacy and a
-                smooth experience with a secure authentication system and
-                interactive UI.
-              </p>
-              <div class="project-tech">
-                <span>Kotlin</span>
-                <span>MVVM</span>
-                <span>Firebase Services</span>
-                <span>Koin DI</span>
-                <span>USDA Courses API</span>
-                <span>StateFlow & Channels</span>
-              </div>
-              <button class="btn-footer" data-project="udemyfy">
-                View Project
-              </button>
-            </div>
-          </div>
-          <!-- Project 6 -->
-          <div class="project-card">
-            <div class="project-img">
-              <img
-                src="images/readmate/Purple Pink Gradient Mobile Application Presentation.png"
-                alt="ReadMate App Screenshot"
-                class="cropped-img"
-              />
-            </div>
-            <div class="project-content">
-              <h3>READMATE</h3>
-              <p>
-                ReadMate is an app designed for reading e-books and exploring
-                downloadable books from APIs. It allows users to browse,
-                purchase, and read e-books while providing a seamless experience
-                with Firebase for user authentication, data storage,
-                notifications, and more. The app also includes an admin module
-                for managing book collections.
-              </p>
-              <div class="project-tech">
-                <span>Kotlin</span>
-                <span>MVVM & StateFlow</span>
-                <span>Firebase Services</span>
-                <span>DBooks API</span>
-                <span>Retrofit & OkHTTP</span>
-                <span>Koin DI</span>
-              </div>
-              <button class="btn-footer" data-project="readmate">
-                View Project
-              </button>
-            </div>
-          </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section id="contact">
-        <h2>Get In <span class="accent">Touch</span></h2>
-        <div class="contact-info">
-          <p><strong>Email:</strong> mohamed.amin.2290@gmail.com</p>
-          <p><strong>Phone:</strong> +2010 2766 0252</p>
-          <p><strong>Location:</strong> Cairo, Egypt</p>
-        </div>
-        <div class="social-links">
-          <!-- Replace with your actual social media links -->
-          <a
-            href="https://github.com/muhamedamin308"
-            title="GitHub"
-            target="_blank"
-          >
-            <img src="github.svg" alt="GitHub" width="24" height="24" />
-          </a>
-          <a
-            href="https://linkedin.com/in/muhamed-amin-hassan"
-            title="LinkedIn"
-            target="_blank"
-          >
-            <img src="linkedin.svg" alt="LinkedIn" width="24" height="24" />
-          </a>
-          <a
-            href="https://x.com/MohamedAmin2290"
-            title="Twitter"
-            target="_blank"
-          >
-            <img
-              src="twitter-alt-square.svg"
-              alt="Twitter"
-              width="24"
-              height="24"
-            />
-          </a>
-          <a
-            href="https://medium.com/@mohamed.amin.2290"
-            title="Medium"
-            target="_blank"
-          >
-            <img src="medium.svg" alt="Medium" width="24" height="24" />
-          </a>
-        </div>
-      </section>
-    </main>
-
-    <footer>
+    <!-- ── PROJECTS ── -->
+    <section id="projects">
       <div class="container">
-        <p>© 2025 Mohamed Amin. All rights reserved.</p>
-        <p>Android Developer</p>
+        <div class="section-header reveal">
+          <span class="section-tag">04 — Projects</span>
+          <h2>My <span class="accent">Projects</span></h2>
+        </div>
+        <div class="projects-grid">
+
+          <!-- Fashion-Zone -->
+          <div class="project-card glass reveal" data-aos="fade-up">
+            <div class="project-img-wrap">
+              <img src="images/fashion-zone/Green and Cream Modern Sales Marketing Presentation.png" alt="Fashion-Zone" class="project-img" />
+              <div class="project-overlay">
+                <button class="btn btn-primary btn-sm" data-project="fashion-zone" id="btn-fashion-zone">View Details</button>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-number">01</div>
+              <h3>Fashion-Zone</h3>
+              <p>Feature-rich e-commerce app with shopping cart, location-based delivery, Razorpay payments, and an admin dashboard with analytics.</p>
+              <div class="project-tech">
+                <span>Java</span><span>MVVM</span><span>Firebase</span><span>AnyChart</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Movies-Club -->
+          <div class="project-card glass reveal" data-aos="fade-up">
+            <div class="project-img-wrap">
+              <img src="images/movies-club/Purple Modern Mobile Apps Services Presentation.png" alt="Movies-Club" class="project-img" />
+              <div class="project-overlay">
+                <button class="btn btn-primary btn-sm" data-project="movies-club" id="btn-movies-club">View Details</button>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-number">02</div>
+              <h3>Movies-Club</h3>
+              <p>Movie browser with smooth animations, comprehensive details, watchlist, and seamless Movies API integration.</p>
+              <div class="project-tech">
+                <span>Kotlin</span><span>Retrofit</span><span>Animations</span><span>Glide</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Mini-Amazon -->
+          <div class="project-card glass reveal" data-aos="fade-up">
+            <div class="project-img-wrap">
+              <img src="images/mini-amazon/Purple App Phone Mockup Sales Marketing Presentation.png" alt="Mini-Amazon" class="project-img" />
+              <div class="project-overlay">
+                <button class="btn btn-primary btn-sm" data-project="mini-amazon" id="btn-mini-amazon">View Details</button>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-number">03</div>
+              <h3>Mini-Amazon</h3>
+              <p>One-stop shopping app covering electronics, clothing, groceries & more, with animated splash screen, and modern MVVM architecture.</p>
+              <div class="project-tech">
+                <span>Kotlin</span><span>MVVM & LiveData</span><span>Firebase</span><span>Dagger Hilt</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Spotify-Clone -->
+          <div class="project-card glass reveal" data-aos="fade-up">
+            <div class="project-img-wrap">
+              <img src="images/spotify-clone/Yellow and Pink Gradient Simple Abstract Mobile Apps Presentation.png" alt="Spotify-Clone" class="project-img" />
+              <div class="project-overlay">
+                <button class="btn btn-primary btn-sm" data-project="spotify-clone" id="btn-spotify-clone">View Details</button>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-number">04</div>
+              <h3>Spotify-Clone</h3>
+              <p>Stream music, create playlists, and discover artists with ExoPlayer, Firebase backend, and a sleek Spotify-inspired UI.</p>
+              <div class="project-tech">
+                <span>Kotlin</span><span>ExoPlayer</span><span>Firebase</span><span>Coroutines</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Udemyfy -->
+          <div class="project-card glass reveal" data-aos="fade-up">
+            <div class="project-img-wrap">
+              <img src="images/udemyfy/Purple Pink Gradient Mobile Application Presentation.png" alt="Udemyfy" class="project-img" />
+              <div class="project-overlay">
+                <button class="btn btn-primary btn-sm" data-project="udemyfy" id="btn-udemyfy">View Details</button>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-number">05</div>
+              <h3>Udemyfy</h3>
+              <p>Course explorer with Watch Later list, privacy-first auth with random avatars, and a smooth interactive UI using StateFlow.</p>
+              <div class="project-tech">
+                <span>Kotlin</span><span>Koin DI</span><span>Firebase</span><span>StateFlow</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- ReadMate -->
+          <div class="project-card glass reveal" data-aos="fade-up">
+            <div class="project-img-wrap">
+              <img src="images/readmate/Purple Pink Gradient Mobile Application Presentation.png" alt="ReadMate" class="project-img" />
+              <div class="project-overlay">
+                <button class="btn btn-primary btn-sm" data-project="readmate" id="btn-readmate">View Details</button>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-number">06</div>
+              <h3>ReadMate</h3>
+              <p>E-book reader with library browsing, book purchases, PDF downloads, notifications, and a full admin module.</p>
+              <div class="project-tech">
+                <span>Kotlin</span><span>MVVM & StateFlow</span><span>Firebase</span><span>Retrofit</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── CONTACT ── -->
+    <section id="contact">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">05 — Contact</span>
+          <h2>Get In <span class="accent">Touch</span></h2>
+        </div>
+        <div class="contact-grid">
+          <div class="contact-text reveal">
+            <p>Whether you have a project in mind, a role to fill, or just want to say hi — my inbox is always open. Let's build something great together.</p>
+            <div class="contact-items">
+              <a href="mailto:mohamed.amin.2290@gmail.com" class="contact-item glass">
+                <span class="contact-icon">📧</span>
+                <div>
+                  <span class="contact-label">Email</span>
+                  <span class="contact-value">mohamed.amin.2290@gmail.com</span>
+                </div>
+              </a>
+              <a href="tel:+201027660252" class="contact-item glass">
+                <span class="contact-icon">📱</span>
+                <div>
+                  <span class="contact-label">Phone</span>
+                  <span class="contact-value">+2010 2766 0252</span>
+                </div>
+              </a>
+              <div class="contact-item glass">
+                <span class="contact-icon">📍</span>
+                <div>
+                  <span class="contact-label">Location</span>
+                  <span class="contact-value">Cairo, Egypt</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="contact-socials reveal">
+            <h3>Find me on</h3>
+            <div class="social-grid">
+              <a href="https://github.com/muhamedamin308" target="_blank" rel="noopener" class="social-card glass">
+                <img src="github.svg" alt="GitHub" width="32" height="32" />
+                <span>GitHub</span>
+              </a>
+              <a href="https://linkedin.com/in/muhamed-amin-hassan" target="_blank" rel="noopener" class="social-card glass">
+                <img src="linkedin.svg" alt="LinkedIn" width="32" height="32" />
+                <span>LinkedIn</span>
+              </a>
+              <a href="https://x.com/MohamedAmin2290" target="_blank" rel="noopener" class="social-card glass">
+                <img src="twitter-alt-square.svg" alt="Twitter/X" width="32" height="32" />
+                <span>Twitter / X</span>
+              </a>
+              <a href="https://medium.com/@mohamed.amin.2290" target="_blank" rel="noopener" class="social-card glass">
+                <img src="medium.svg" alt="Medium" width="32" height="32" />
+                <span>Medium</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── FOOTER ── -->
+    <footer>
+      <div class="container footer-inner">
+        <div class="footer-logo">
+          <img src="android.png" alt="Android" width="22" height="22" />
+          <span>Muhamed<span class="accent">.</span></span>
+        </div>
+        <p class="footer-copy" id="footerYear">© 2025 Muhamed Amin. All rights reserved.</p>
+        <p class="footer-sub">Android Developer · Cairo, Egypt</p>
       </div>
     </footer>
 
-    <!-- Project Modal for Fashion-Zone App -->
-    <div id="FashionZoneModel" class="modal">
-      <div class="modal-content">
-        <span class="close">&times;</span>
-        <h2>Fashion-Zone App</h2>
-        <div class="modal-section">
-          <h4>Description</h4>
-          <p>
-            Fashion-Zone is a feature-rich e-commerce application that provides
-            users with an engaging shopping experience for a wide variety of
-            clothing items. The app is designed for both users and
-            administrators, enabling efficient management and smooth user
-            interaction.
-          </p>
-        </div>
+    <!-- ═══════════════ MODALS ═══════════════ -->
 
-        <div class="modal-section">
-          <h4>Key Features</h4>
-          <ul style="padding-left: 20px">
-            <li>
-              Users can sign up or log in to their accounts to access the app.
-            </li>
-            <li>
-              View New Products, Popular Products, and other clothing items.
-            </li>
-            <li>Items added to the cart can be reviewed and managed.</li>
-            <li>Purchase multiple items together from the cart.</li>
-            <li>
-              Select or fetch the current address using the "Get My Current
-              Location" button.
-            </li>
-            <li>View payment summary and confirm payment.</li>
-          </ul>
+    <!-- Fashion-Zone Modal -->
+    <div id="modal-fashion-zone" class="modal" role="dialog" aria-modal="true" aria-label="Fashion-Zone Project">
+      <div class="modal-backdrop"></div>
+      <div class="modal-content glass">
+        <button class="modal-close" aria-label="Close">&times;</button>
+        <div class="modal-header">
+          <span class="modal-number">01</span>
+          <h2>Fashion-Zone <span class="accent">App</span></h2>
         </div>
-
-        <div class="modal-section">
-          <h4>Technical Details</h4>
-          <ul>
-            <li>Java: Core programming language for app development.</li>
-            <li>Glide: Image loading and caching.</li>
-            <li>Real-time & Authentication synchronization with Firebase</li>
-            <li>
-              Google Play Services Location: Fetching the user’s current
-              location.
-            </li>
-            <li>Razorpay:checkout: Payment gateway integration.</li>
-            <li>AnyChart: Generating pie charts for analytics.</li>
-          </ul>
-        </div>
-
-        <div class="modal-section">
-          <h4>Screenshots</h4>
-          <div class="gallery">
-            <div class="gallery-img">
-              <img
-                src="images/fashion-zone/MergedImages (1).png"
-                alt="Fashion-Zone App Screenshot"
-                class="cropped-img"
-              />
-            </div>
-            <div class="gallery-img">
-              <img
-                src="images/fashion-zone/MergedImages(1).png"
-                alt="Fashion-Zone App Screenshot"
-                class="cropped-img"
-              />
-            </div>
-            <div class="gallery-img">
-              <img
-                src="images/fashion-zone/MergedImages(2).png"
-                alt="Fashion-Zone App Screenshot"
-                class="cropped-img"
-              />
+        <div class="modal-body">
+          <div class="modal-section">
+            <h4>Description</h4>
+            <p>Fashion-Zone is a feature-rich e-commerce application providing users with an engaging shopping experience for a wide variety of clothing items. Designed for both users and administrators, enabling efficient management and smooth interaction.</p>
+          </div>
+          <div class="modal-section">
+            <h4>Key Features</h4>
+            <ul>
+              <li>Sign up / log in to access the app.</li>
+              <li>View New Products, Popular Products, and clothing items.</li>
+              <li>Review and manage items in the cart.</li>
+              <li>Purchase multiple items together from the cart.</li>
+              <li>Fetch current address using "Get My Current Location".</li>
+              <li>View payment summary and confirm payment.</li>
+            </ul>
+          </div>
+          <div class="modal-section">
+            <h4>Technical Stack</h4>
+            <div class="modal-tech-grid">
+              <span class="tech-chip">Java</span>
+              <span class="tech-chip">Firebase Auth</span>
+              <span class="tech-chip">Firebase Realtime DB</span>
+              <span class="tech-chip">Glide</span>
+              <span class="tech-chip">Google Play Services Location</span>
+              <span class="tech-chip">Razorpay Checkout</span>
+              <span class="tech-chip">AnyChart</span>
+              <span class="tech-chip">MVVM</span>
             </div>
           </div>
-        </div>
-
-        <div class="modal-links">
-          <a
-            href="https://github.com/muhamedamin308/fashion-zone"
-            class="btn-footer"
-            target="_blank"
-            >GitHub Repository</a
-          >
+          <div class="modal-section">
+            <h4>Screenshots</h4>
+            <div class="modal-gallery">
+              <div class="gallery-img"><img src="images/fashion-zone/MergedImages (1).png" alt="Fashion Zone Screenshot" /></div>
+              <div class="gallery-img"><img src="images/fashion-zone/MergedImages(1).png" alt="Fashion Zone Screenshot" /></div>
+              <div class="gallery-img"><img src="images/fashion-zone/MergedImages(2).png" alt="Fashion Zone Screenshot" /></div>
+            </div>
+          </div>
+          <div class="modal-actions">
+            <a href="https://github.com/muhamedamin308/fashion-zone" class="btn btn-primary" target="_blank" rel="noopener">
+              <img src="github.svg" alt="" width="18" height="18" /> GitHub Repository
+            </a>
+          </div>
         </div>
       </div>
     </div>
 
-    <!-- Project Modal for Movies-Club App -->
-    <div id="MoviesClubModel" class="modal">
-      <div class="modal-content">
-        <span class="close">&times;</span>
-        <h2>Movies-Club App</h2>
-        <div class="modal-section">
-          <h4>Description</h4>
-          <p>
-            Lights, camera, action! Dive into a world of cinematic delight with
-            the Movie Club App - your ticket to endless entertainment on your
-            Android device. With seamless integration of Movies APIs and
-            buttery-smooth animations, this app will transport you to a realm
-            where movie magic meets technology. Say goodbye to boring evenings
-            and hello to a reel-y good time with our Movie Club App - it's
-            showtime!
-          </p>
+    <!-- Movies-Club Modal -->
+    <div id="modal-movies-club" class="modal" role="dialog" aria-modal="true" aria-label="Movies-Club Project">
+      <div class="modal-backdrop"></div>
+      <div class="modal-content glass">
+        <button class="modal-close" aria-label="Close">&times;</button>
+        <div class="modal-header">
+          <span class="modal-number">02</span>
+          <h2>Movies-Club <span class="accent">App</span></h2>
         </div>
-
-        <div class="modal-section">
-          <h4>Key Features</h4>
-          <ul style="padding-left: 20px">
-            <li>
-              Seamless Movie Exploration: Effortlessly browse a vast library of
-              movies.
-            </li>
-            <li>
-              Detailed Movie Information: View comprehensive details about each
-              film (synopsis, cast, crew, ratings, etc.).
-            </li>
-            <li>
-              Intuitive Search & Discovery: Easily find movies using keywords,
-              genres, or popularity.
-            </li>
-            <li>Purchase multiple items together from the cart.</li>
-            <li>
-              Personalized Watchlist: Save movies to a "Watch Later" list for
-              future viewing.
-            </li>
-            <li>
-              Smooth Navigation: Enjoy a fluid and responsive user experience
-              with buttery-smooth animations.
-            </li>
-          </ul>
-        </div>
-
-        <div class="modal-section">
-          <h4>Technical Details</h4>
-          <ul>
-            <li>
-              Native Android Development: Built using Kotlin, a modern and
-              concise programming language.
-            </li>
-            <li>
-              Asynchronous Networking: Utilizes Retrofit for efficient and
-              type-safe communication with Movies APIs.
-            </li>
-            <li>
-              Rich Visual Experience: Implements Animations to enhance user
-              interaction and provide visual appeal.
-            </li>
-            <li>
-              Modern UI Design: Leverages Modern UI components from the Android
-              Jetpack library and potentially other design libraries for a
-              polished look and feel.
-            </li>
-            <li>
-              Robust Architecture: Follows the MVVM (Model-View-ViewModel)
-              architectural pattern for a clean, testable, and maintainable
-              codebase, separating UI logic from business logic.
-            </li>
-          </ul>
-        </div>
-
-        <div class="modal-section">
-          <h4>Screenshots</h4>
-          <div class="gallery">
-            <div class="gallery-img">
-              <img
-                src="images/movies-club/Purple Modern Mobile Apps Services Presentation.png"
-                alt="Fashion-Zone App Screenshot"
-                class="cropped-img"
-              />
-            </div>
-            <div class="gallery-img">
-              <img
-                src="images/movies-club/MergedImages (1).png"
-                alt="Fashion-Zone App Screenshot"
-                class="cropped-img"
-              />
+        <div class="modal-body">
+          <div class="modal-section">
+            <h4>Description</h4>
+            <p>Dive into a world of cinematic delight with the Movie Club App — your ticket to endless entertainment on Android. Seamless Movies API integration and buttery-smooth animations transport you to where movie magic meets technology.</p>
+          </div>
+          <div class="modal-section">
+            <h4>Key Features</h4>
+            <ul>
+              <li>Effortlessly browse a vast library of movies.</li>
+              <li>View comprehensive film details: synopsis, cast, ratings & more.</li>
+              <li>Search movies by keywords, genres, or popularity.</li>
+              <li>Save movies to a "Watch Later" list.</li>
+              <li>Fluid, responsive animations throughout.</li>
+            </ul>
+          </div>
+          <div class="modal-section">
+            <h4>Technical Stack</h4>
+            <div class="modal-tech-grid">
+              <span class="tech-chip">Kotlin</span>
+              <span class="tech-chip">MVVM</span>
+              <span class="tech-chip">Retrofit</span>
+              <span class="tech-chip">Glide</span>
+              <span class="tech-chip">Animations</span>
+              <span class="tech-chip">Jetpack</span>
             </div>
           </div>
-        </div>
-
-        <div class="modal-links">
-          <a
-            href="https://github.com/muhamedamin308/fashion-zone"
-            class="btn-footer"
-            target="_blank"
-            >GitHub Repository</a
-          >
+          <div class="modal-section">
+            <h4>Screenshots</h4>
+            <div class="modal-gallery">
+              <div class="gallery-img"><img src="images/movies-club/Purple Modern Mobile Apps Services Presentation.png" alt="Movies Club Screenshot" /></div>
+              <div class="gallery-img"><img src="images/movies-club/MergedImages (1).png" alt="Movies Club Screenshot" /></div>
+            </div>
+          </div>
+          <div class="modal-actions">
+            <a href="https://github.com/muhamedamin308/movies-club" class="btn btn-primary" target="_blank" rel="noopener">
+              <img src="github.svg" alt="" width="18" height="18" /> GitHub Repository
+            </a>
+          </div>
         </div>
       </div>
     </div>
 
-    <!-- Project Modal for Mini-Amazon App -->
-    <div id="MiniAmazonModel" class="modal">
-      <div class="modal-content">
-        <span class="close">&times;</span>
-        <h2>Mini-Amazon App</h2>
-        <div class="modal-section">
-          <h4>Description</h4>
-          <p>
-            Welcome to Mini-Amazon, your one-stop destination for all your
-            shopping needs. Explore a vast array of products including
-            electronics, games, clothing, groceries, and more, all conveniently
-            accessible in one place.
-          </p>
+    <!-- Mini-Amazon Modal -->
+    <div id="modal-mini-amazon" class="modal" role="dialog" aria-modal="true" aria-label="Mini-Amazon Project">
+      <div class="modal-backdrop"></div>
+      <div class="modal-content glass">
+        <button class="modal-close" aria-label="Close">&times;</button>
+        <div class="modal-header">
+          <span class="modal-number">03</span>
+          <h2>Mini-Amazon <span class="accent">App</span></h2>
         </div>
-
-        <div class="modal-section">
-          <h4>Key Features</h4>
-          <ul style="padding-left: 20px">
-            <li>
-              One-Stop Shopping: Access a wide variety of products including
-              electronics, games, clothing, groceries, and more in a single
-              application.
-            </li>
-            <li>
-              Effortless Browsing: Explore diverse product categories with ease.
-            </li>
-            <li>
-              Account Management: Securely sign up, log in, and manage your user
-              account.
-            </li>
-            <li>
-              Visual Product Display: High-quality image loading for products
-              using Glide.
-            </li>
-            <li>
-              Seamless Navigation: Navigate smoothly between different sections
-              of the app using Navigation Fragments.
-            </li>
-            <li>
-              Engaging Launch Experience: Enjoy a modern and animated splash
-              screen.
-            </li>
-            <li>
-              User-Friendly Interface: Benefit from a clean and organized UI
-              built with View Binding.
-            </li>
-          </ul>
-        </div>
-
-        <div class="modal-section">
-          <h4>Technical Details</h4>
-          <ul>
-            <li>
-              Image Loading & Caching: Utilizes Glide for efficient image
-              fetching and display in ImageViews.
-            </li>
-            <li>
-              Simplified View Interaction: Employs View Binding to streamline
-              interaction with UI elements.
-            </li>
-            <li>
-              Intuitive Screen Navigation: Implements Navigation Fragments for
-              managing in-app navigation
-            </li>
-            <li>
-              Enhanced Launch UI: Features an Animated Splash Screen using the
-              Android library.
-            </li>
-            <li>
-              Reactive UI Logic: Leverages MVVM (Model-View-ViewModel) and
-              LiveData for decoupled and state-aware UI development.
-            </li>
-            <li>
-              Dependency Injection: Uses Dagger Hilt for efficient and organized
-              dependency management.
-            </li>
-            <li>
-              State Management: Employs State Flow and Channels for managing and
-              observing the application's state.
-            </li>
-          </ul>
-        </div>
-
-        <div class="modal-section">
-          <h4>Screenshots</h4>
-          <div class="gallery">
-            <div class="gallery-img">
-              <img
-                src="images/mini-amazon/Merged-Images.png"
-                alt="Fashion-Zone App Screenshot"
-                class="cropped-img"
-              />
-            </div>
-            <div class="gallery-img">
-              <img
-                src="images/mini-amazon/Merged-Images-1.png"
-                alt="Fashion-Zone App Screenshot"
-                class="cropped-img"
-              />
-            </div>
-            <div class="gallery-img">
-              <img
-                src="images/mini-amazon/Merged-Images-2.png"
-                alt="Fashion-Zone App Screenshot"
-                class="cropped-img"
-              />
+        <div class="modal-body">
+          <div class="modal-section">
+            <h4>Description</h4>
+            <p>Your one-stop destination for all shopping needs. Explore electronics, games, clothing, groceries, and more — all conveniently accessible in one beautiful app.</p>
+          </div>
+          <div class="modal-section">
+            <h4>Key Features</h4>
+            <ul>
+              <li>One-stop access to electronics, games, clothing, groceries & more.</li>
+              <li>Secure sign up, login & user account management.</li>
+              <li>High-quality Glide-powered product images.</li>
+              <li>Smooth Navigation Fragments between app sections.</li>
+              <li>Animated splash screen for a modern launch experience.</li>
+              <li>State Flow & Channels for reactive state management.</li>
+            </ul>
+          </div>
+          <div class="modal-section">
+            <h4>Technical Stack</h4>
+            <div class="modal-tech-grid">
+              <span class="tech-chip">Kotlin</span>
+              <span class="tech-chip">MVVM & LiveData</span>
+              <span class="tech-chip">Firebase Services</span>
+              <span class="tech-chip">Dagger Hilt</span>
+              <span class="tech-chip">Coroutines</span>
+              <span class="tech-chip">Glide</span>
+              <span class="tech-chip">View Binding</span>
+              <span class="tech-chip">Navigation Fragments</span>
             </div>
           </div>
-        </div>
-
-        <div class="modal-links">
-          <a
-            href="https://github.com/muhamedamin308/mini-amazon"
-            class="btn-footer"
-            target="_blank"
-            >GitHub Repository</a
-          >
+          <div class="modal-section">
+            <h4>Screenshots</h4>
+            <div class="modal-gallery">
+              <div class="gallery-img"><img src="images/mini-amazon/Merged-Images.png" alt="Mini Amazon Screenshot" /></div>
+              <div class="gallery-img"><img src="images/mini-amazon/Merged-Images-1.png" alt="Mini Amazon Screenshot" /></div>
+              <div class="gallery-img"><img src="images/mini-amazon/Merged-Images-2.png" alt="Mini Amazon Screenshot" /></div>
+            </div>
+          </div>
+          <div class="modal-actions">
+            <a href="https://github.com/muhamedamin308/mini-amazon" class="btn btn-primary" target="_blank" rel="noopener">
+              <img src="github.svg" alt="" width="18" height="18" /> GitHub Repository
+            </a>
+          </div>
         </div>
       </div>
     </div>
 
-    <!-- Project Modal for Spotify-Clone App -->
-    <div id="SpotifyCloneModel" class="modal">
-      <div class="modal-content">
-        <span class="close">&times;</span>
-        <h2>Spotify-Clone App</h2>
-        <div class="modal-section">
-          <h4>Description</h4>
-          <p>
-            Stream your favorite music and discover new artists with this sleek
-            and intuitive audio player. Create playlists and enjoy your
-            personalized soundscape on the go.
-          </p>
+    <!-- Spotify-Clone Modal -->
+    <div id="modal-spotify-clone" class="modal" role="dialog" aria-modal="true" aria-label="Spotify-Clone Project">
+      <div class="modal-backdrop"></div>
+      <div class="modal-content glass">
+        <button class="modal-close" aria-label="Close">&times;</button>
+        <div class="modal-header">
+          <span class="modal-number">04</span>
+          <h2>Spotify-Clone <span class="accent">App</span></h2>
         </div>
-
-        <div class="modal-section">
-          <h4>Key Features</h4>
-          <ul style="padding-left: 20px">
-            <li>
-              Stream your favorite music! This app lets you listen to tracks,
-              create playlists, and discover new artists.
-            </li>
-            <li>
-              Your music, anywhere. Enjoy a seamless listening experience with
-              this Spotify-inspired app.
-            </li>
-            <li>
-              Tune in to endless audio. Explore music, podcasts, and more with
-              this sleek streaming app.
-            </li>
-            <li>
-              Get your groove on! Listen to music, build playlists, and discover
-              new sounds.
-            </li>
-            <li>
-              [IN PROGRESS] Experience your personalized audio library. Stream
-              music and podcasts on the go.
-            </li>
-          </ul>
-        </div>
-
-        <div class="modal-section">
-          <h4>Technical Details</h4>
-          <ul>
-            <li>
-              Exo Player Api : A media player is an app-level component that
-              allows playback of video and audio files.
-            </li>
-            <li>
-              MVVM & LiveData : Saperate logic code from views and save the
-              state in case the screen configuration changes.
-            </li>
-            <li>
-              Dagger Hilt Dependency Injection : to inject objects in Modules.
-            </li>
-            <li>Firebase Services : Backend of the application.</li>
-            <li>Coroutines : do some code in the background.</li>
-            <li>
-              Android MediaMetadata : Contains metadata about an item, such as
-              the title, artist, etc.
-            </li>
-          </ul>
-        </div>
-
-        <div class="modal-section">
-          <h4>Screenshots</h4>
-          <div class="gallery">
-            <div class="gallery-img">
-              <img
-                src="images/spotify-clone/Yellow and Pink Gradient Simple Abstract Mobile Apps Presentation.png"
-                alt="Fashion-Zone App Screenshot"
-                class="cropped-img"
-              />
-            </div>
-            <div class="gallery-img">
-              <img
-                src="images/spotify-clone/Merged-Images.png"
-                alt="Fashion-Zone App Screenshot"
-                class="cropped-img"
-              />
-            </div>
-            <div class="gallery-img">
-              <img
-                src="images/spotify-clone/Screenshot-1714341053.png"
-                alt="Fashion-Zone App Screenshot"
-                class="cropped-img"
-              />
+        <div class="modal-body">
+          <div class="modal-section">
+            <h4>Description</h4>
+            <p>Stream your favorite music and discover new artists with this sleek, intuitive audio player. Create playlists and enjoy your personalized soundscape on the go.</p>
+          </div>
+          <div class="modal-section">
+            <h4>Key Features</h4>
+            <ul>
+              <li>Stream music tracks and create custom playlists.</li>
+              <li>Discover artists and explore your personalized audio library.</li>
+              <li>ExoPlayer-powered smooth audio playback.</li>
+              <li>Firebase backend for authentication & data.</li>
+              <li>MediaMetadata for track title, artist & cover art.</li>
+            </ul>
+          </div>
+          <div class="modal-section">
+            <h4>Technical Stack</h4>
+            <div class="modal-tech-grid">
+              <span class="tech-chip">Kotlin</span>
+              <span class="tech-chip">MVVM & LiveData</span>
+              <span class="tech-chip">ExoPlayer API</span>
+              <span class="tech-chip">Firebase Services</span>
+              <span class="tech-chip">Dagger Hilt</span>
+              <span class="tech-chip">Coroutines</span>
+              <span class="tech-chip">Android MediaMetadata</span>
             </div>
           </div>
-        </div>
-
-        <div class="modal-links">
-          <a
-            href="https://github.com/muhamedamin308/spotify-clone"
-            class="btn-footer"
-            target="_blank"
-            >GitHub Repository</a
-          >
+          <div class="modal-section">
+            <h4>Screenshots</h4>
+            <div class="modal-gallery">
+              <div class="gallery-img"><img src="images/spotify-clone/Yellow and Pink Gradient Simple Abstract Mobile Apps Presentation.png" alt="Spotify Clone Screenshot" /></div>
+              <div class="gallery-img"><img src="images/spotify-clone/Merged-Images.png" alt="Spotify Clone Screenshot" /></div>
+              <div class="gallery-img"><img src="images/spotify-clone/Screenshot-1714341053.png" alt="Spotify Clone Screenshot" /></div>
+            </div>
+          </div>
+          <div class="modal-actions">
+            <a href="https://github.com/muhamedamin308/spotify-clone" class="btn btn-primary" target="_blank" rel="noopener">
+              <img src="github.svg" alt="" width="18" height="18" /> GitHub Repository
+            </a>
+          </div>
         </div>
       </div>
     </div>
 
-    <!-- Project Modal for Udemyfy App -->
-    <div id="UdemyfyModel" class="modal">
-      <div class="modal-content">
-        <span class="close">&times;</span>
-        <h2>Udemyfy App</h2>
-        <div class="modal-section">
-          <h4>Description</h4>
-          <p>
-            Udemyfy is an Android application that allows users to explore
-            various courses, view detailed information about them, and save
-            their favorite courses to a "Watch Later" list. The app is designed
-            with a focus on user privacy and seamless user experience, featuring
-            a robust authentication system with randomly generated avatars and
-            an intuitive, interactive UI.
-          </p>
+    <!-- Udemyfy Modal -->
+    <div id="modal-udemyfy" class="modal" role="dialog" aria-modal="true" aria-label="Udemyfy Project">
+      <div class="modal-backdrop"></div>
+      <div class="modal-content glass">
+        <button class="modal-close" aria-label="Close">&times;</button>
+        <div class="modal-header">
+          <span class="modal-number">05</span>
+          <h2>Udemyfy <span class="accent">App</span></h2>
         </div>
-
-        <div class="modal-section">
-          <h4>Key Features</h4>
-          <ul style="padding-left: 20px">
-            <li>
-              Explore Courses: Browse a variety of courses and view detailed
-              information.
-            </li>
-            <li>
-              Watch Later List: Save courses to a watch later list for easy
-              access.
-            </li>
-            <li>
-              User Authentication: Secure authentication using Firebase
-              Authentication, including random profile picture generation.
-            </li>
-            <li>
-              Interactive UI: Engaging user interface with smooth navigation and
-              responsive design.
-            </li>
-          </ul>
-        </div>
-
-        <div class="modal-section">
-          <h4>Technical Details</h4>
-          <ul>
-            <li>Circular Image: To display images in a circular format.</li>
-            <li>
-              Graph Navigation: For seamless navigation between fragments.
-            </li>
-            <li>
-              Koin : The app uses Koin for dependency injection, providing a
-              lightweight and easy-to-use solution for managing dependencies.
-            </li>
-            <li>
-              Firebase: Authentication: Provides secure user authentication.
-              Realtime Database: Stores user data, including the watch later
-              list.
-            </li>
-            <li>
-              APIs: Courses API: Fetches course data from an external source.
-            </li>
-          </ul>
-        </div>
-
-        <div class="modal-section">
-          <h4>Screenshots</h4>
-          <div class="gallery">
-            <div class="gallery-img">
-              <img
-                src="images/udemyfy/MergedImages(1).png"
-                alt="Fashion-Zone App Screenshot"
-                class="cropped-img"
-              />
-            </div>
-            <div class="gallery-img">
-              <img
-                src="images/udemyfy/MergedImages(2).png"
-                alt="Fashion-Zone App Screenshot"
-                class="cropped-img"
-              />
-            </div>
-            <div class="gallery-img">
-              <img
-                src="images/udemyfy/MergedImages(3) (1).png"
-                alt="Fashion-Zone App Screenshot"
-                class="cropped-img"
-              />
+        <div class="modal-body">
+          <div class="modal-section">
+            <h4>Description</h4>
+            <p>Udemyfy lets users explore courses, view detailed info, and save favorites to a "Watch Later" list. Built with user privacy in mind — featuring a robust auth system with randomly generated avatars and an interactive UI.</p>
+          </div>
+          <div class="modal-section">
+            <h4>Key Features</h4>
+            <ul>
+              <li>Browse and explore a variety of courses.</li>
+              <li>Save any course to a Watch Later list.</li>
+              <li>Firebase Authentication with random avatar generation.</li>
+              <li>Smooth navigation powered by Navigation Fragments.</li>
+              <li>Interactive, responsive UI design.</li>
+            </ul>
+          </div>
+          <div class="modal-section">
+            <h4>Technical Stack</h4>
+            <div class="modal-tech-grid">
+              <span class="tech-chip">Kotlin</span>
+              <span class="tech-chip">MVVM</span>
+              <span class="tech-chip">Firebase Services</span>
+              <span class="tech-chip">Koin DI</span>
+              <span class="tech-chip">USDA Courses API</span>
+              <span class="tech-chip">StateFlow & Channels</span>
+              <span class="tech-chip">Navigation Graph</span>
             </div>
           </div>
-        </div>
-
-        <div class="modal-links">
-          <a
-            href="https://github.com/muhamedamin308/udemyfy"
-            class="btn-footer"
-            target="_blank"
-            >GitHub Repository</a
-          >
+          <div class="modal-section">
+            <h4>Screenshots</h4>
+            <div class="modal-gallery">
+              <div class="gallery-img"><img src="images/udemyfy/MergedImages(1).png" alt="Udemyfy Screenshot" /></div>
+              <div class="gallery-img"><img src="images/udemyfy/MergedImages(2).png" alt="Udemyfy Screenshot" /></div>
+              <div class="gallery-img"><img src="images/udemyfy/MergedImages(3) (1).png" alt="Udemyfy Screenshot" /></div>
+            </div>
+          </div>
+          <div class="modal-actions">
+            <a href="https://github.com/muhamedamin308/udemyfy" class="btn btn-primary" target="_blank" rel="noopener">
+              <img src="github.svg" alt="" width="18" height="18" /> GitHub Repository
+            </a>
+          </div>
         </div>
       </div>
     </div>
 
-    <!-- Project Modal for ReadMate App -->
-    <div id="ReadMateModel" class="modal">
-      <div class="modal-content">
-        <span class="close">&times;</span>
-        <h2>ReadMate App</h2>
-        <div class="modal-section">
-          <h4>Description</h4>
-          <p>
-            ReadMate is an app designed for reading e-books and exploring
-            downloadable books from APIs. It allows users to browse, purchase,
-            and read e-books while providing a seamless experience with Firebase
-            for user authentication, data storage, notifications, and more. The
-            app also includes an admin module for managing book collections.
-          </p>
+    <!-- ReadMate Modal -->
+    <div id="modal-readmate" class="modal" role="dialog" aria-modal="true" aria-label="ReadMate Project">
+      <div class="modal-backdrop"></div>
+      <div class="modal-content glass">
+        <button class="modal-close" aria-label="Close">&times;</button>
+        <div class="modal-header">
+          <span class="modal-number">06</span>
+          <h2>ReadMate <span class="accent">App</span></h2>
         </div>
-
-        <div class="modal-section">
-          <h4>Key Features</h4>
-          <ul style="padding-left: 20px">
-            <li>
-              Explore two main categories: Library (Firebase database books) and
-              Explore (downloadable books via API). Search for any book by title
-              or category in the Explore section.
-            </li>
-            <li>
-              Users can buy books from the Library and add them to their MyBooks
-              screen. Purchased books are e-books that can be read within the
-              app.
-            </li>
-            <li>
-              Add books to the Bookcase for later reference (save for buying or
-              recommending).
-            </li>
-            <li>View reviews from other users for each book in the Library.</li>
-            <li>
-              Downloadable Books: Books in the Explore section can be downloaded
-              as PDFs.
-            </li>
-            <li>
-              Payments & Transactions: Track payment methods and credit card
-              information for book purchases.
-            </li>
-            <li>
-              Notifications: Personalized notifications for each user, provided
-              via Firebase Cloud Messaging.
-            </li>
-            <li>
-              User Authentication: Log in via Google or sign up with email and
-              password, using Firebase Authentication.
-            </li>
-          </ul>
-        </div>
-
-        <div class="modal-section">
-          <h4>Technical Details</h4>
-          <ul>
-            <li>Navigation Fragment: For fragment navigation.</li>
-            <li>ViewPager2: Used for the onboarding screen.</li>
-            <li>Retrofit: For handling network requests.</li>
-            <li>Gson Converter: For JSON parsing.</li>
-            <li>OkHttp: For managing HTTP calls.</li>
-            <li>Logging Interceptor: For logging network requests.</li>
-            <li>
-              Remote Database: Firebase: Authentication: User sign-in and
-              sign-up. Firestore: Storing and retrieving book data. Cloud
-              Messaging: For sending notifications. Storage: For saving profile
-              images and Firebase Books images.
-            </li>
-            <li>
-              Dependency Injection: Koin to manage dependency injection
-              throughout the app.
-            </li>
-            <li>Architecture: MVVM (Model-View-ViewModel)</li>
-          </ul>
-        </div>
-
-        <div class="modal-section">
-          <h4>Screenshots</h4>
-          <div class="gallery">
-            <div class="gallery-img">
-              <img
-                src="images/readmate/MergedImages(1) (1).png"
-                alt="Fashion-Zone App Screenshot"
-                class="cropped-img"
-              />
-            </div>
-            <div class="gallery-img">
-              <img
-                src="images/readmate/MergedImages(2) (1).png"
-                alt="Fashion-Zone App Screenshot"
-                class="cropped-img"
-              />
-            </div>
-            <div class="gallery-img">
-              <img
-                src="images/readmate/MergedImages(3) (1).png"
-                alt="Fashion-Zone App Screenshot"
-                class="cropped-img"
-              />
-            </div>
-            <div class="gallery-img">
-              <img
-                src="images/readmate/MergedImages(4) (1).png"
-                alt="Fashion-Zone App Screenshot"
-                class="cropped-img"
-              />
-            </div>
-            <div class="gallery-img">
-              <img
-                src="images/readmate/MergedImages(5) (1).png"
-                alt="Fashion-Zone App Screenshot"
-                class="cropped-img"
-              />
+        <div class="modal-body">
+          <div class="modal-section">
+            <h4>Description</h4>
+            <p>ReadMate is an e-book reading app that lets users browse, purchase, and read e-books from Firebase and external APIs. Features an admin module for managing book collections, FCM notifications, and full Firebase integration.</p>
+          </div>
+          <div class="modal-section">
+            <h4>Key Features</h4>
+            <ul>
+              <li>Library (Firebase books) & Explore (API books) categories.</li>
+              <li>Purchase and read e-books within the app.</li>
+              <li>Bookcase feature to save books for later.</li>
+              <li>User reviews for library books.</li>
+              <li>Download books as PDFs from the Explore section.</li>
+              <li>Payment tracking & transaction history.</li>
+              <li>Personalized push notifications via Firebase Cloud Messaging.</li>
+              <li>Authentication via Google or email/password.</li>
+            </ul>
+          </div>
+          <div class="modal-section">
+            <h4>Technical Stack</h4>
+            <div class="modal-tech-grid">
+              <span class="tech-chip">Kotlin</span>
+              <span class="tech-chip">MVVM & StateFlow</span>
+              <span class="tech-chip">Firebase Auth</span>
+              <span class="tech-chip">Firestore</span>
+              <span class="tech-chip">Firebase Cloud Messaging</span>
+              <span class="tech-chip">Firebase Storage</span>
+              <span class="tech-chip">Retrofit & OkHttp</span>
+              <span class="tech-chip">Koin DI</span>
+              <span class="tech-chip">DBooks API</span>
+              <span class="tech-chip">ViewPager2</span>
             </div>
           </div>
-        </div>
-
-        <div class="modal-links">
-          <a
-            href="https://github.com/muhamedamin308/readmate"
-            class="btn-footer"
-            target="_blank"
-            >GitHub Repository</a
-          >
-        </div>
-      </div>
-    </div>
-
-    <!-- Project Modal for E-commerce App -->
-    <div id="FashionZoneModel" class="modal">
-      <div class="modal-content">
-        <span class="close">&times;</span>
-        <h2>Fashion-Zone App</h2>
-        <div class="modal-section">
-          <h4>Description</h4>
-          <p>
-            Fashion-Zone is a feature-rich e-commerce application that provides
-            users with an engaging shopping experience for a wide variety of
-            clothing items. The app is designed for both users and
-            administrators, enabling efficient management and smooth user
-            interaction.
-          </p>
-        </div>
-
-        <div class="modal-section">
-          <h4>Key Features</h4>
-          <ul style="padding-left: 20px">
-            <li>
-              Users can sign up or log in to their accounts to access the app.
-            </li>
-            <li>
-              View New Products, Popular Products, and other clothing items.
-            </li>
-            <li>Items added to the cart can be reviewed and managed.</li>
-            <li>Purchase multiple items together from the cart.</li>
-            <li>
-              Select or fetch the current address using the "Get My Current
-              Location" button.
-            </li>
-            <li>View payment summary and confirm payment.</li>
-          </ul>
-        </div>
-
-        <div class="modal-section">
-          <h4>Technical Details</h4>
-          <ul>
-            <li>Java: Core programming language for app development.</li>
-            <li>Glide: Image loading and caching.</li>
-            <li>Real-time & Authentication synchronization with Firebase</li>
-            <li>
-              Google Play Services Location: Fetching the user’s current
-              location.
-            </li>
-            <li>Razorpay:checkout: Payment gateway integration.</li>
-            <li>AnyChart: Generating pie charts for analytics.</li>
-          </ul>
-        </div>
-
-        <div class="modal-section">
-          <h4>Screenshots</h4>
-          <div class="gallery">
-            <div class="gallery-img">
-              <img
-                src="images/fashion-zone/MergedImages (1).png"
-                alt="Fashion-Zone App Screenshot"
-                class="cropped-img"
-              />
-            </div>
-            <div class="gallery-img">
-              <img
-                src="images/fashion-zone/MergedImages(1).png"
-                alt="Fashion-Zone App Screenshot"
-                class="cropped-img"
-              />
-            </div>
-            <div class="gallery-img">
-              <img
-                src="images/fashion-zone/MergedImages(2).png"
-                alt="Fashion-Zone App Screenshot"
-                class="cropped-img"
-              />
+          <div class="modal-section">
+            <h4>Screenshots</h4>
+            <div class="modal-gallery">
+              <div class="gallery-img"><img src="images/readmate/MergedImages(1) (1).png" alt="ReadMate Screenshot" /></div>
+              <div class="gallery-img"><img src="images/readmate/MergedImages(2) (1).png" alt="ReadMate Screenshot" /></div>
+              <div class="gallery-img"><img src="images/readmate/MergedImages(3) (1).png" alt="ReadMate Screenshot" /></div>
+              <div class="gallery-img"><img src="images/readmate/MergedImages(4) (1).png" alt="ReadMate Screenshot" /></div>
+              <div class="gallery-img"><img src="images/readmate/MergedImages(5) (1).png" alt="ReadMate Screenshot" /></div>
             </div>
           </div>
-        </div>
-
-        <div class="modal-links">
-          <a
-            href="https://github.com/muhamedamin308/fashion-zone"
-            class="btn-footer"
-            target="_blank"
-            >GitHub Repository</a
-          >
+          <div class="modal-actions">
+            <a href="https://github.com/muhamedamin308/readmate" class="btn btn-primary" target="_blank" rel="noopener">
+              <img src="github.svg" alt="" width="18" height="18" /> GitHub Repository
+            </a>
+          </div>
         </div>
       </div>
     </div>
