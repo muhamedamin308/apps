@@ -284,13 +284,18 @@ const statObserver = new IntersectionObserver((entries) => {
 }, { threshold: 0.5 });
 
 document.querySelectorAll('.stat-num').forEach(el => {
-  // Store suffix
-  const match = el.textContent.match(/\d+/);
-  const suffix = el.textContent.replace(/\d+/, '').trim();
-  if (match) {
-    el.dataset.suffix = suffix;
-    el.dataset.target = match[0];
-    el.textContent = '0' + suffix;
-    statObserver.observe(el);
-  }
+  const text = el.textContent.trim();           // e.g. "3+"
+  const target = parseInt(text);                // 3
+  const suffix = text.replace(/[0-9]/g, '');   // "+"
+  let count = 0;
+
+  const update = () => {
+    count++;
+    el.textContent = count + suffix;
+    if (count < target) requestAnimationFrame(update);
+  };
+
+  el.textContent = '0' + suffix; // reset display
+  // trigger when in view...
+  update();
 });
