@@ -115,7 +115,7 @@ const codeSamples = {
   dart:
     `<span class="kw">class</span> <span class="tp">MuhamedAmin</span> <span class="kw">implements</span> <span class="tp">Engineer</span> {
   <span class="kw">final</span> base = <span class="str">'Flutter'</span>;
-  <span class="kw">final</span> internship = <span class="str">'Knowledge BI'</span>;
+  <span class="kw">final</span> role = <span class="str">'Flutter Developer'</span>;
   <span class="kw">final</span> stack = [
     <span class="str">'Dart'</span>, <span class="str">'BLoC'</span>,
     <span class="str">'get_it'</span>, <span class="str">'Dio'</span>,
